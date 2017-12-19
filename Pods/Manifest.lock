@@ -1,0 +1,12 @@
+PODS:
+  - XYPingUtil (0.0.1)
+
+DEPENDENCIES:
+  - XYPingUtil (~> 0.0.1)
+
+SPEC CHECKSUMS:
+  XYPingUtil: 707e3b113c0ed9d85ca8ef7b13c12ee9cd21b276
+
+PODFILE CHECKSUM: b279366d6ef00b32be5cf2dce4c3af7ed2669aa6
+
+COCOAPODS: 1.4.0.beta.2

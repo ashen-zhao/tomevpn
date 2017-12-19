@@ -13,6 +13,7 @@ static const CGFloat LblY = 7;
 static const CGFloat QRSize = 150;
 
 @interface ASServerListCell()
+@property (nonatomic, strong) UILabel *lblPing;
 @property (nonatomic, strong) UIImageView *bgImage;
 @property (nonatomic, strong) UIImageView *qrImage;
 @property (nonatomic, strong) UIView *borderView;
@@ -27,7 +28,7 @@ static const CGFloat QRSize = 150;
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        [self addSubview:self.bgImage];
+        [self.contentView addSubview:self.bgImage];
         self.bgImage.userInteractionEnabled = YES;
         [self.bgImage addSubview:self.borderView];
         [self.bgImage addSubview:self.lblIP];
@@ -36,6 +37,8 @@ static const CGFloat QRSize = 150;
         [self.bgImage addSubview:self.lblMethod];
         [self.bgImage addSubview:self.qrImage];
         [self.bgImage addSubview:self.btnqrcode];
+        [self.contentView addSubview:self.lblPing];
+        
         [self.btnqrcode addTarget:self action:@selector(modeQR) forControlEvents:UIControlEventTouchUpInside];
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(modeQR)];
         self.qrImage.userInteractionEnabled = YES;
@@ -66,6 +69,7 @@ static const CGFloat QRSize = 150;
 }
 
 - (void)layoutSubviews {
+    _lblPing.frame = CGRectMake(20, 15, 100, 30);
     _bgImage.frame = CGRectMake(8, 5, self.contentView.frame.size.width - 16, self.contentView.frame.size.height - 10);
     _borderView.frame = CGRectMake(5, 5, self.bgImage.frame.size.width - 10, self.bgImage.frame.size.height - 10);
     _lblIP.frame = CGRectMake(0, LblY + 10, self.bgImage.frame.size.width, 30);
@@ -79,6 +83,7 @@ static const CGFloat QRSize = 150;
 
 #pragma mark - methods
 - (void)setupData:(ASServerModel *)model {
+    self.lblPing.text = [NSString stringWithFormat:@"Ping:%ldms",model.ping];
     NSURL * bgurl = [NSURL URLWithString:model.bgImageUrl];
     [self.bgImage sd_setImageWithURL:bgurl];
     NSURL * qrurl = [NSURL URLWithString:model.qrCodeUrl];
@@ -97,6 +102,7 @@ static const CGFloat QRSize = 150;
 
 
 #pragma mark - Lazy Loading
+
 - (UIImageView *)bgImage {
     if (_bgImage) {
         return _bgImage;
@@ -171,5 +177,16 @@ static const CGFloat QRSize = 150;
 
     return _qrImage;
 }
+
+- (UILabel *)lblPing {
+    if (_lblPing) {
+        return  _lblPing;
+    }
+    _lblPing = [[UILabel alloc] init];
+    [self setupLabelStyle:_lblPing];
+    _lblPing.textAlignment = NSTextAlignmentLeft;
+    return _lblPing;
+}
+
 
 @end

@@ -7,8 +7,10 @@
 //
 
 #import "ASGETServerList.h"
+#import "PingUtil.h"
 
-const static NSString *serverURL = @"https://global.ishadowx.net";
+
+static NSString * const serverURL = @"https://global.ishadowx.net";
 @implementation ASGETServerList
 
 + (void)getlist:(void(^)(NSArray *))success {
@@ -46,6 +48,12 @@ const static NSString *serverURL = @"https://global.ishadowx.net";
         model.qrCodeUrl = [NSString stringWithFormat:@"%@/%@",serverURL,[html substringWithRange:[match rangeAtIndex:5]]];
         model.bgImageUrl = [html substringWithRange:[match rangeAtIndex:6]];
         [lists addObject:model];
+        
+        [PingUtil pingHost:model.ip success:^(NSInteger msCount) {
+            model.ping = msCount;
+        } failure:^{
+            
+        }];
     }
     success(lists);
 }

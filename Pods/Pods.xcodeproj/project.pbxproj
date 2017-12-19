@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		023EE1C6EA6ED39A2CFA61E145E529E2 /* Pods-SSServerList-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D59E874A6F770A2E161982BE2935D9B5 /* Pods-SSServerList-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2201A43AB30B141D4759DE69A21173B5 /* SimplePing.h in Headers */ = {isa = PBXBuildFile; fileRef = 377D97D7472E2F3E7C8CAFE472183C7F /* SimplePing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40D67A0F1131ECF56C3F3D105F955D24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		68B8FC450FF241437431312DED6E9D2E /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FC3896349720FB99D9C3F762B59A33 /* SimplePing.m */; };
+		7108263B9527485C0DD49FE91C27259D /* XYPingUtil-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7029302620486C103B3A408E612CD56E /* XYPingUtil-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74D3F91D58AB784D1AAB22519771D437 /* PingManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E4CC137BE8E18A16F0364DB629F14B7 /* PingManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		752A89110C803F6EE08AECCDFADDFDB2 /* PingUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C324A08E7035E55C860B72A0C56F7F9D /* PingUtil.m */; };
+		7DDAC694E18CD884D20F323BEC4E0CD5 /* PingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8C956F16EC34853BDFED7AAC48F0B3 /* PingManager.m */; };
+		9ACBC4B50E3E89412EA59E0AF49C69FF /* XYPingUtil-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 922D00A9715A70A624B1E464DDB08661 /* XYPingUtil-dummy.m */; };
+		9FCA0BD9D21B27777D8C95C5B036E403 /* Pods-SSServerList-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE5ECD5FC32E4925B112DD9DB2ED038 /* Pods-SSServerList-dummy.m */; };
+		D74C93D6F88C43E0E5D14822A897EE18 /* PingUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 69C31076FFAF9E940765DF4646610ECC /* PingUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D89BAFD35E6ED63DC2D77FBFD9F114D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE60542FF88C5F7A47092572FF60D9E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 348FDFBF4DCCD035A51C67FB771F2FA5;
+			remoteInfo = XYPingUtil;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		190571355FD1CBFA00D7C65C34C797A5 /* XYPingUtil.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = XYPingUtil.modulemap; sourceTree = "<group>"; };
+		377D97D7472E2F3E7C8CAFE472183C7F /* SimplePing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimplePing.h; path = PingUtil/SimplePing.h; sourceTree = "<group>"; };
+		378C2A9E74465BDFF0205DEB6C6CEA8D /* Pods-SSServerList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SSServerList.release.xcconfig"; sourceTree = "<group>"; };
+		3E4CC137BE8E18A16F0364DB629F14B7 /* PingManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PingManager.h; path = PingUtil/PingManager.h; sourceTree = "<group>"; };
+		4A59F0333DBCBCF305D3356760B6AE14 /* Pods-SSServerList-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SSServerList-acknowledgements.plist"; sourceTree = "<group>"; };
+		50012F9BBB4333ABE0506C5CE04A342C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50913C6D8747D0770CFD021CDD7D60B4 /* XYPingUtil-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XYPingUtil-prefix.pch"; sourceTree = "<group>"; };
+		618D39690C4049A0F0CCB67B378DC6D9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		69C31076FFAF9E940765DF4646610ECC /* PingUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PingUtil.h; path = PingUtil/PingUtil.h; sourceTree = "<group>"; };
+		6C31DCFB2657AD5842C4144B7BB6A843 /* Pods-SSServerList-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SSServerList-frameworks.sh"; sourceTree = "<group>"; };
+		6CA15CE966ADE749A6F3CBF40FDF7C30 /* Pods-SSServerList-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SSServerList-resources.sh"; sourceTree = "<group>"; };
+		6D8C956F16EC34853BDFED7AAC48F0B3 /* PingManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PingManager.m; path = PingUtil/PingManager.m; sourceTree = "<group>"; };
+		7029302620486C103B3A408E612CD56E /* XYPingUtil-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XYPingUtil-umbrella.h"; sourceTree = "<group>"; };
+		922D00A9715A70A624B1E464DDB08661 /* XYPingUtil-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XYPingUtil-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AA70100F094D79089C6FF043245A2A63 /* XYPingUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XYPingUtil.framework; path = XYPingUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD74AC89B52460E11D2714DA460A705B /* Pods-SSServerList.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SSServerList.modulemap"; sourceTree = "<group>"; };
+		BEE5ECD5FC32E4925B112DD9DB2ED038 /* Pods-SSServerList-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SSServerList-dummy.m"; sourceTree = "<group>"; };
+		BFC2263B570B0DE0F6243348ECA5615E /* Pods_SSServerList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SSServerList.framework; path = "Pods-SSServerList.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1FC3896349720FB99D9C3F762B59A33 /* SimplePing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SimplePing.m; path = PingUtil/SimplePing.m; sourceTree = "<group>"; };
+		C324A08E7035E55C860B72A0C56F7F9D /* PingUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PingUtil.m; path = PingUtil/PingUtil.m; sourceTree = "<group>"; };
+		CB4E0F18D0793A70BF330E08577B9086 /* Pods-SSServerList-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SSServerList-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D59E874A6F770A2E161982BE2935D9B5 /* Pods-SSServerList-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SSServerList-umbrella.h"; sourceTree = "<group>"; };
+		E385C31B27A14E37013095B46E424F87 /* Pods-SSServerList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SSServerList.debug.xcconfig"; sourceTree = "<group>"; };
+		EB7319781A26E2B0B923888D3AF5F29A /* XYPingUtil.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XYPingUtil.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C959A63BD330FAFF80C3C995E9D8E05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D89BAFD35E6ED63DC2D77FBFD9F114D4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF36E236F5B2D130A350295C77DB7D45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40D67A0F1131ECF56C3F3D105F955D24 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A78274AE984AC818608F26C4E4D1F39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8502E385FF964C17B689D94126FA777 /* XYPingUtil */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4A4F70D668DE7E52FA97F4E1E67F152D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFC2263B570B0DE0F6243348ECA5615E /* Pods_SSServerList.framework */,
+				AA70100F094D79089C6FF043245A2A63 /* XYPingUtil.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				1A78274AE984AC818608F26C4E4D1F39 /* Pods */,
+				4A4F70D668DE7E52FA97F4E1E67F152D /* Products */,
+				BBE0EACE3C88A15CC200EF82CAF0F8CD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7F704D4F4A3A01CBACE8097557CE7258 /* Pods-SSServerList */ = {
+			isa = PBXGroup;
+			children = (
+				50012F9BBB4333ABE0506C5CE04A342C /* Info.plist */,
+				BD74AC89B52460E11D2714DA460A705B /* Pods-SSServerList.modulemap */,
+				CB4E0F18D0793A70BF330E08577B9086 /* Pods-SSServerList-acknowledgements.markdown */,
+				4A59F0333DBCBCF305D3356760B6AE14 /* Pods-SSServerList-acknowledgements.plist */,
+				BEE5ECD5FC32E4925B112DD9DB2ED038 /* Pods-SSServerList-dummy.m */,
+				6C31DCFB2657AD5842C4144B7BB6A843 /* Pods-SSServerList-frameworks.sh */,
+				6CA15CE966ADE749A6F3CBF40FDF7C30 /* Pods-SSServerList-resources.sh */,
+				D59E874A6F770A2E161982BE2935D9B5 /* Pods-SSServerList-umbrella.h */,
+				E385C31B27A14E37013095B46E424F87 /* Pods-SSServerList.debug.xcconfig */,
+				378C2A9E74465BDFF0205DEB6C6CEA8D /* Pods-SSServerList.release.xcconfig */,
+			);
+			name = "Pods-SSServerList";
+			path = "Target Support Files/Pods-SSServerList";
+			sourceTree = "<group>";
+		};
+		BBE0EACE3C88A15CC200EF82CAF0F8CD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F704D4F4A3A01CBACE8097557CE7258 /* Pods-SSServerList */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C8502E385FF964C17B689D94126FA777 /* XYPingUtil */ = {
+			isa = PBXGroup;
+			children = (
+				3E4CC137BE8E18A16F0364DB629F14B7 /* PingManager.h */,
+				6D8C956F16EC34853BDFED7AAC48F0B3 /* PingManager.m */,
+				69C31076FFAF9E940765DF4646610ECC /* PingUtil.h */,
+				C324A08E7035E55C860B72A0C56F7F9D /* PingUtil.m */,
+				377D97D7472E2F3E7C8CAFE472183C7F /* SimplePing.h */,
+				C1FC3896349720FB99D9C3F762B59A33 /* SimplePing.m */,
+				F13053D273EE7B5A609A7FF7B52744E2 /* Support Files */,
+			);
+			name = XYPingUtil;
+			path = XYPingUtil;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F13053D273EE7B5A609A7FF7B52744E2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				618D39690C4049A0F0CCB67B378DC6D9 /* Info.plist */,
+				190571355FD1CBFA00D7C65C34C797A5 /* XYPingUtil.modulemap */,
+				EB7319781A26E2B0B923888D3AF5F29A /* XYPingUtil.xcconfig */,
+				922D00A9715A70A624B1E464DDB08661 /* XYPingUtil-dummy.m */,
+				50913C6D8747D0770CFD021CDD7D60B4 /* XYPingUtil-prefix.pch */,
+				7029302620486C103B3A408E612CD56E /* XYPingUtil-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/XYPingUtil";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2FEF6DF0D31EC39DF66B59FC979BCBCB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				023EE1C6EA6ED39A2CFA61E145E529E2 /* Pods-SSServerList-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95F7EDABF5C619A9C474D906B7E0AE06 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74D3F91D58AB784D1AAB22519771D437 /* PingManager.h in Headers */,
+				D74C93D6F88C43E0E5D14822A897EE18 /* PingUtil.h in Headers */,
+				2201A43AB30B141D4759DE69A21173B5 /* SimplePing.h in Headers */,
+				7108263B9527485C0DD49FE91C27259D /* XYPingUtil-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		348FDFBF4DCCD035A51C67FB771F2FA5 /* XYPingUtil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BED4333283C91F31CD3D9D5744F1417 /* Build configuration list for PBXNativeTarget "XYPingUtil" */;
+			buildPhases = (
+				B2034F36AF01744740B972AC3BC67E98 /* Sources */,
+				FF36E236F5B2D130A350295C77DB7D45 /* Frameworks */,
+				95F7EDABF5C619A9C474D906B7E0AE06 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XYPingUtil;
+			productName = XYPingUtil;
+			productReference = AA70100F094D79089C6FF043245A2A63 /* XYPingUtil.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		935E3C90E8606F5DF4F19C5FACDAF60A /* Pods-SSServerList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E3D0A115B7390877FDCD82A14D94822 /* Build configuration list for PBXNativeTarget "Pods-SSServerList" */;
+			buildPhases = (
+				503B9151BE8783DBDA81BCFCFE383887 /* Sources */,
+				2C959A63BD330FAFF80C3C995E9D8E05 /* Frameworks */,
+				2FEF6DF0D31EC39DF66B59FC979BCBCB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E209DCDFD242834724EA10700550BC9D /* PBXTargetDependency */,
+			);
+			name = "Pods-SSServerList";
+			productName = "Pods-SSServerList";
+			productReference = BFC2263B570B0DE0F6243348ECA5615E /* Pods_SSServerList.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 4A4F70D668DE7E52FA97F4E1E67F152D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				935E3C90E8606F5DF4F19C5FACDAF60A /* Pods-SSServerList */,
+				348FDFBF4DCCD035A51C67FB771F2FA5 /* XYPingUtil */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		503B9151BE8783DBDA81BCFCFE383887 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FCA0BD9D21B27777D8C95C5B036E403 /* Pods-SSServerList-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2034F36AF01744740B972AC3BC67E98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DDAC694E18CD884D20F323BEC4E0CD5 /* PingManager.m in Sources */,
+				752A89110C803F6EE08AECCDFADDFDB2 /* PingUtil.m in Sources */,
+				68B8FC450FF241437431312DED6E9D2E /* SimplePing.m in Sources */,
+				9ACBC4B50E3E89412EA59E0AF49C69FF /* XYPingUtil-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E209DCDFD242834724EA10700550BC9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XYPingUtil;
+			target = 348FDFBF4DCCD035A51C67FB771F2FA5 /* XYPingUtil */;
+			targetProxy = FE60542FF88C5F7A47092572FF60D9E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D23278938ADF334174C5BF2A4B6B1B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		34E9D3C26970551935C469EB404C50A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB7319781A26E2B0B923888D3AF5F29A /* XYPingUtil.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XYPingUtil/XYPingUtil-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XYPingUtil/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XYPingUtil/XYPingUtil.modulemap";
+				PRODUCT_NAME = XYPingUtil;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		554335E51390B6FDF322DA01F69DF04C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 378C2A9E74465BDFF0205DEB6C6CEA8D /* Pods-SSServerList.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SSServerList/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SSServerList/Pods-SSServerList.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SSServerList;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5DB4C81C3D90E01997402CA33B348836 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E385C31B27A14E37013095B46E424F87 /* Pods-SSServerList.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SSServerList/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SSServerList/Pods-SSServerList.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SSServerList;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		964DC81602430D63086B7177E9D50E6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB7319781A26E2B0B923888D3AF5F29A /* XYPingUtil.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/XYPingUtil/XYPingUtil-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XYPingUtil/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XYPingUtil/XYPingUtil.modulemap";
+				PRODUCT_NAME = XYPingUtil;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		995C3A53DEAA96B47E756185345E180D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BED4333283C91F31CD3D9D5744F1417 /* Build configuration list for PBXNativeTarget "XYPingUtil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				964DC81602430D63086B7177E9D50E6E /* Debug */,
+				34E9D3C26970551935C469EB404C50A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				995C3A53DEAA96B47E756185345E180D /* Debug */,
+				1D23278938ADF334174C5BF2A4B6B1B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E3D0A115B7390877FDCD82A14D94822 /* Build configuration list for PBXNativeTarget "Pods-SSServerList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DB4C81C3D90E01997402CA33B348836 /* Debug */,
+				554335E51390B6FDF322DA01F69DF04C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
