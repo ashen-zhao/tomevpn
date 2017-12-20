@@ -7,5 +7,5 @@ target 'SSServerList' do
 
   # Pods for SSServerList
   pod 'XYPingUtil', '~> 0.0.1'
-
+  pod 'MBProgressHUD', '~> 1.1.0'
 end

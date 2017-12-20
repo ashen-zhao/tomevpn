@@ -9,6 +9,7 @@
 #import "ASPreviewingController.h"
 #import "ASServerView.h"
 #import "UIImageView+WebCache.h"
+#import "MBProgressHUD.h"
 @interface ASPreviewingController ()
 
 @end
@@ -58,6 +59,12 @@
 }
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
     if (error == nil) {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.label.text = @"保存成功";
+        hud.mode = MBProgressHUDModeText;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
     }
 }
 

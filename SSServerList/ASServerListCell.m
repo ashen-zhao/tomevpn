@@ -8,6 +8,7 @@
 
 #import "ASServerListCell.h"
 #import "UIImageView+WebCache.h"
+#import "MBProgressHUD.h"
 
 static const CGFloat LblY = 7;
 static const CGFloat QRSize = 150;
@@ -43,17 +44,26 @@ static const CGFloat QRSize = 150;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(modeQR)];
         self.qrImage.userInteractionEnabled = YES;
         [self.qrImage addGestureRecognizer:tap];
-//        UILongPressGestureRecognizer *press = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(press)];
-//        [self.qrImage addGestureRecognizer:press];
+        UILongPressGestureRecognizer *press = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(press:)];
+        [self.qrImage addGestureRecognizer:press];
     }
     return self;
 }
 
-- (void)press {
-    UIImageWriteToSavedPhotosAlbum(self.qrImage.image, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
+- (void)press:(UILongPressGestureRecognizer *)gesture {
+    if (gesture.state == UIGestureRecognizerStateBegan){
+        UIImageWriteToSavedPhotosAlbum(self.qrImage.image, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
+    }
 }
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
-    
+    if (error == nil) {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.superview animated:YES];
+        hud.label.text = @"保存成功";
+        hud.mode = MBProgressHUDModeText;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.superview animated:YES];
+        });
+    }
 }
 
 - (void)modeQR {
@@ -69,7 +79,7 @@ static const CGFloat QRSize = 150;
 }
 
 - (void)layoutSubviews {
-    _lblPing.frame = CGRectMake(20, 15, 100, 30);
+    _lblPing.frame = CGRectMake(20, 15, 120, 30);
     _bgImage.frame = CGRectMake(8, 5, self.contentView.frame.size.width - 16, self.contentView.frame.size.height - 10);
     _borderView.frame = CGRectMake(5, 5, self.bgImage.frame.size.width - 10, self.bgImage.frame.size.height - 10);
     _lblIP.frame = CGRectMake(0, LblY + 10, self.bgImage.frame.size.width, 30);

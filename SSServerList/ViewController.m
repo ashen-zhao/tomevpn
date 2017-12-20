@@ -10,6 +10,8 @@
 #import "ASGETServerList.h"
 #import "ASServerListCell.h"
 #import "ASPreviewingController.h"
+#import "MBProgressHud.h"
+
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource,UIViewControllerPreviewingDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataSources;
@@ -35,7 +37,12 @@
     [self.refreshView addSubview:self.lblStatus];
     [self.tableView addSubview:self.refreshView];
 
-    [self refreshData:nil];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self refreshData:^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    }];
 }
 
 

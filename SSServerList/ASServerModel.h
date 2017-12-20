@@ -17,4 +17,5 @@
 @property (nonatomic, copy) NSString * qrCodeUrl;
 @property (nonatomic, copy) NSString * bgImageUrl;
 @property (nonatomic, assign) NSInteger ping;
+
 @end

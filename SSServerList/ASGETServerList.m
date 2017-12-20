@@ -47,15 +47,25 @@ static NSString * const serverURL = @"https://global.ishadowx.net";
         model.style = [html substringWithRange:[match rangeAtIndex:4]];
         model.qrCodeUrl = [NSString stringWithFormat:@"%@/%@",serverURL,[html substringWithRange:[match rangeAtIndex:5]]];
         model.bgImageUrl = [html substringWithRange:[match rangeAtIndex:6]];
-        [lists addObject:model];
-
-        [PingUtil pingHost:model.ip success:^(NSInteger msCount) {
-            model.ping = msCount;
-        } failure:^{
+        if (![model.port isEqualToString:@""] && ![model.pwd isEqualToString:@""] && ![model.qrCodeUrl containsString:@"ssr"]) {
             
-        }];
-
+            [lists addObject:model];
+            [PingUtil pingHost:model.ip success:^(NSInteger msCount) {
+                model.ping = msCount;
+            } failure:^{
+                
+            }];
+        }
     }
+    [lists sortUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        ASServerModel *s1 = obj1;
+        ASServerModel *s2 = obj2;
+        if (s1.ping > s2.ping) {
+            return NSOrderedDescending;
+        } else {
+            return NSOrderedAscending;
+        }
+    }];
     success(lists);
 }
 @end

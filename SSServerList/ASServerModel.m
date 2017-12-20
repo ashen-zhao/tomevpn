@@ -9,5 +9,4 @@
 #import "ASServerModel.h"
 
 @implementation ASServerModel
-
 @end
