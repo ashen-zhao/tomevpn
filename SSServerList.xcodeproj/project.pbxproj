@@ -46,6 +46,7 @@
 		8CE7D7CA1FE3C359001C7DB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CE7D7C81FE3C359001C7DB9 /* LaunchScreen.storyboard */; };
 		8CE7D7CD1FE3C359001C7DB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE7D7CC1FE3C359001C7DB9 /* main.m */; };
 		8CE7D7D71FE3C3D8001C7DB9 /* ASGETServerList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE7D7D61FE3C3D8001C7DB9 /* ASGETServerList.m */; };
+		8CF3C0001FE908A200895B5F /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CF3BFFF1FE908A100895B5F /* loading.png */; };
 		D2EBFAB995D6E2DBDEFCD2E4 /* Pods_SSServerList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25D28C6F7A5E2BD3BC412DC /* Pods_SSServerList.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,7 @@
 		8CE7D7CC1FE3C359001C7DB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8CE7D7D51FE3C3D8001C7DB9 /* ASGETServerList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASGETServerList.h; sourceTree = "<group>"; };
 		8CE7D7D61FE3C3D8001C7DB9 /* ASGETServerList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASGETServerList.m; sourceTree = "<group>"; };
+		8CF3BFFF1FE908A100895B5F /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
 		967604D04F545098E2C9320F /* Pods-SSServerList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSServerList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SSServerList/Pods-SSServerList.debug.xcconfig"; sourceTree = "<group>"; };
 		A25D28C6F7A5E2BD3BC412DC /* Pods_SSServerList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SSServerList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B579BF8712C92C8D43278D /* Pods-SSServerList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSServerList.release.xcconfig"; path = "Pods/Target Support Files/Pods-SSServerList/Pods-SSServerList.release.xcconfig"; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				8CCE44DE1FE79125008A151C /* ASServerView.m */,
 				8CCE44E01FE7A35A008A151C /* qrcode.png */,
 				8CCE44E21FE7C02A008A151C /* logo@3x.png */,
+				8CF3BFFF1FE908A100895B5F /* loading.png */,
 			);
 			path = SSServerList;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CF3C0001FE908A200895B5F /* loading.png in Resources */,
 				8CE7D7CA1FE3C359001C7DB9 /* LaunchScreen.storyboard in Resources */,
 				8CE7D7C71FE3C359001C7DB9 /* Assets.xcassets in Resources */,
 				8CE7D7C51FE3C359001C7DB9 /* Main.storyboard in Resources */,

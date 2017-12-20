@@ -13,6 +13,11 @@
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource,UIViewControllerPreviewingDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataSources;
+
+#pragma mark - Refresh
+@property (nonatomic, strong) UIView * refreshView;
+@property (nonatomic, strong) UILabel * lblStatus;
+@property (nonatomic, strong) UIActivityIndicatorView * indicator;
 @end
 
 @implementation ViewController
@@ -22,26 +27,34 @@
     return UIStatusBarStyleLightContent;
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    
-    [ASGETServerList getlist:^(NSArray *list) {
-        [self.dataSources addObjectsFromArray:list];
-        [self.tableView reloadData];
-    }];
-    
     [self.tableView registerClass:ASServerListCell.class forCellReuseIdentifier:@"serverIden"];
-    
+    [self.refreshView addSubview:self.indicator];
+    [self.refreshView addSubview:self.lblStatus];
+    [self.tableView addSubview:self.refreshView];
+
+    [self refreshData:nil];
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+
+#pragma mark - Methods
+- (void)refreshData:(void(^)(void))success {
+    
+    [ASGETServerList getlist:^(NSArray *list) {
+        [self.dataSources removeAllObjects];
+        [self.dataSources addObjectsFromArray:list];
+        [self.tableView reloadData];
+        if (success) {
+            success();
+        }
+    }];
 }
 
 #pragma mark - UITableView Delegate
@@ -66,6 +79,30 @@
         }
     }
     return cell;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (scrollView.contentOffset.y > -64.0f && scrollView.contentOffset.y < 0.0f) {
+        self.lblStatus.text = @"下拉刷新";
+        [_indicator stopAnimating];
+    } else if ([@"下拉刷新" isEqualToString:self.lblStatus.text] && scrollView.contentOffset.y < -64.0f ) {
+        self.lblStatus.text = @"释放刷新";
+        [_indicator stopAnimating];
+    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (scrollView.contentOffset.y <= -64.0) {
+        self.lblStatus.text = @"加载中";
+        [_indicator startAnimating];
+        scrollView.contentInset = UIEdgeInsetsMake(64.0f, 0.0f, 0.0f, 0.0f);
+        [self refreshData:^{
+            [UIView animateWithDuration:0.318 animations:^{
+                scrollView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f);
+            }];
+        }];
+    }
 }
 
 #pragma mark - peek pop Delegate
@@ -102,7 +139,38 @@
         return  _tableView;
     }
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, -20, self.view.frame.size.width, self.view.frame.size.height + 20) style:UITableViewStylePlain];
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
     return _tableView;
+}
+
+- (UIView *)refreshView {
+    if (_refreshView) {
+        return _refreshView;
+    }
+    _refreshView = [[UILabel alloc] initWithFrame:CGRectMake(0, -64, self.tableView.frame.size.width, 64)];
+    return _refreshView;
+}
+
+- (UIActivityIndicatorView *)indicator {
+    if (_indicator) {
+        return _indicator;
+    }
+    _indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    _indicator.center = CGPointMake(self.refreshView.center.x - 40, self.refreshView.center.y + 64);
+    [_indicator setHidesWhenStopped:NO];
+    return _indicator;
+}
+
+- (UILabel *)lblStatus {
+    if (_lblStatus) {
+        return _lblStatus;
+    }
+    _lblStatus = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.indicator.frame)+15, 0, 70, 64)];
+    _lblStatus.font = [UIFont systemFontOfSize:15];
+    _lblStatus.textColor = [UIColor grayColor];
+    return _lblStatus;
 }
 
 @end
