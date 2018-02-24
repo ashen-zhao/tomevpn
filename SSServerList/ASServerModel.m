@@ -9,4 +9,7 @@
 #import "ASServerModel.h"
 
 @implementation ASServerModel
+-(NSString *)bgImageUrl {
+    return [NSString stringWithFormat:@"%@%@",@"https://global.ishadowx.net", _bgImageUrl];
+}
 @end

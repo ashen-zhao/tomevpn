@@ -10,7 +10,7 @@
 #import "ASGETServerList.h"
 #import "ASServerListCell.h"
 #import "ASPreviewingController.h"
-#import "MBProgressHud.h"
+#import "MBProgressHUD.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource,UIViewControllerPreviewingDelegate>
 @property (nonatomic, strong) UITableView *tableView;

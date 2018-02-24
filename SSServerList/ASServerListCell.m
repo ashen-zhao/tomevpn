@@ -118,6 +118,7 @@ static const CGFloat QRSize = 150;
         return _bgImage;
     }
     _bgImage = [[UIImageView alloc] init];
+    _bgImage.backgroundColor = [UIColor lightGrayColor];
     return _bgImage;
 }
 
@@ -183,6 +184,7 @@ static const CGFloat QRSize = 150;
         return _qrImage;
     }
     _qrImage = [[UIImageView alloc] init];
+    _qrImage.backgroundColor = [UIColor lightGrayColor];
     _qrImage.frame = CGRectMake(_bgImage.frame.size.width - 30, CGRectGetMaxY(_lblMethod.frame) + 20, 0, 0);
 
     return _qrImage;
