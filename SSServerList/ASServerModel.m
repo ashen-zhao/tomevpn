@@ -10,6 +10,6 @@
 
 @implementation ASServerModel
 -(NSString *)bgImageUrl {
-    return [NSString stringWithFormat:@"%@%@",@"https://global.ishadowx.net", _bgImageUrl];
+    return [NSString stringWithFormat:@"%@%@",@"http://isx.tn", _bgImageUrl];
 }
 @end
