@@ -10,7 +10,7 @@
 #import "PingUtil.h"
 
 
-static NSString * const serverURL = @"http://isx.tn";
+static NSString * const serverURL = @"https://my.ishadowx.net/";
 @implementation ASGETServerList
 
 + (void)getlist:(void(^)(NSArray *))success {
